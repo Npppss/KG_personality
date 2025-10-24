@@ -27,6 +27,17 @@ setx OPENAI_API_KEY "sk-<API_KEY_OPENAI>"
    # Gemini (if using Gemini)
    GEMINI_API_KEY=your_gemini_api_key_here
    GEMINI_MODEL=gemini-pro
+   
+   # DagsHub Integration (optional - for experiment tracking)
+   DAGSHUB_ENABLED=true
+   DAGSHUB_REPO=your_username/your_repo_name
+   DAGSHUB_TOKEN=your_dagshub_token
+   
+   # DagsHub Storage (optional - for artifact storage)
+   DAGSHUB_BUCKET_NAME=your_bucket_name
+   DAGSHUB_ENDPOINT_URL=https://dagshub.com
+   DAGSHUB_ACCESS_KEY_ID=your_access_key
+   DAGSHUB_SECRET_ACCESS_KEY=your_secret_key
    ```
 
 3. **Run the pipeline:**
@@ -198,7 +209,7 @@ type 20251022-093045\metrics.json
 ### Dependencies Error
 ```bash
 # Install one by one if there are errors
-pip install openai google-generativeai python-dotenv pydantic networkx pyvis orjson tqdm
+pip install openai google-generativeai python-dotenv pydantic networkx pyvis orjson tqdm dagshub
 
 # Test OpenAI
 python -c "import openai; print('OpenAI OK!')"
