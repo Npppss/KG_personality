@@ -1,0 +1,10 @@
+openai>=1.30.0
+google-generativeai>=0.3.0
+python-dotenv
+pydantic>=2.7.0
+networkx
+pyvis
+orjson
+tqdm
+dagshub
+mlflow
